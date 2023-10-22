@@ -173,7 +173,7 @@ end
   isDragging = false
 end
 
-endTitle.InputBegan:Connect(function(input) 
+Title.InputBegan:Connect(function(input) 
       if input.UserInputType == Enum.UserInputType.MouseButton1 then
         startDrag() 
       end 
