@@ -12,6 +12,7 @@ ConsoleFrame.BackgroundColor3 = Color3.new(0.15, 0.15, 0.15)
 ConsoleFrame.BorderSizePixel = 0
 ConsoleFrame.Parent = ScreenGui
 ConsoleFrame.BackgroundTransparency = 1
+ConsoleFrame.Visible = false
 
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, 0, 0.1, 0)
@@ -67,11 +68,11 @@ local function fadeOut(element)
 end
 
 function Console:Hide()
-    fadeOut(ConsoleFrame)
+    ConsoleFrame.Visible = false
 end
 
 function Console:Show()
-    fadeIn(ConsoleFrame)
+    ConsoleFrame.Visible = true
 end
 
 local function slideIn(element)
