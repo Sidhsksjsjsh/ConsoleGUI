@@ -66,6 +66,14 @@ local function fadeOut(element)
     fadeTween:Play()
 end
 
+function Console:Hide()
+    fadeOut(ConsoleFrame)
+end
+
+function Console:Show()
+    fadeIn(ConsoleFrame)
+end
+
 local function slideIn(element)
     element.Position = UDim2.new(0, 0, #MessagesContainer:GetChildren() * 0.05 - 0.5, 0)
     local slideInfo = TweenInfo.new(0.3, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
